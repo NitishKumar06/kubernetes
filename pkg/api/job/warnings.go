@@ -43,7 +43,7 @@ func WarningsForJobSpec(ctx context.Context, path *field.Path, spec, oldSpec *ba
 			warnings = append(warnings, fmt.Sprintf("%s: %s", path, msg))
 		}
 	}
-	var oldPodTemplate *core.PodTemplateSpec
+	var oldPodTemplate core.PodTemplateSpec
 	if oldSpec != nil {
 		oldPodTemplate = &oldSpec.Template
 	}
